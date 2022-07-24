@@ -43,6 +43,8 @@ section {
     left: 0;
     right: 0;
     z-index: 2;
+    background-color: #ffffff5b;
+    padding-bottom: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -52,6 +54,8 @@ section {
 }
 
 .logoContainer{
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
@@ -71,7 +75,6 @@ section {
     color: #000000;
     font-weight: 900;
     border-radius: 50px;
-    margin-top: 10px;
     height: 40px;
     padding: 0 10px;
     display: flex;

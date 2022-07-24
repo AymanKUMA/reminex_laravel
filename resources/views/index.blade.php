@@ -17,14 +17,25 @@
     <nav class="navbar">
         <a href="#">
             <marquee width="100%" direction="left">
-                This is a sample scrolling text that has scrolls texts to right.
+                @unless (count($alerts) == 0)
+                    @foreach ($alerts as $alert)
+                        {{$alert->alert}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @endforeach
+                @else
+                    this is a sample text that shows the latest notifications about reminex direction
+                @endunless
             </marquee>
         </a>
     </nav>
     <div class="logoContainer">
         <a href="#" class="logo"><img src="{{ url('images/logo.svg') }}" alt=""></a>
-        <a href="{{ route('home.login') }}" class="button"><img
+        @auth
+            
+        @else
+            <a href="{{ route('home.login') }}" class="button"><img
                 src="{{ url('images/log-in.png') }}" alt=""> CONNEXION</a>
+        @endauth
+        
     </div>
 </header>
 
@@ -42,12 +53,13 @@
                 @foreach($slides as $slide)
                     @if($slide['layout'] == 1 )
                         <div class="swiper-slide fade">
-                            <div class="box"
-                                style="background: url({{ url('images/home-bg-3.jpg') }}) no-repeat;">
+                            <?php
+                                echo '<div class="box" style="background: url(data:image;base64,'.base64_encode($slide['image']).' ); no-repeat;">';
+                            ?>
                                 <div class="content">
-                                    <h3>{{ $slide['title'] }}</h3>
-                                    <span>{{ $slide['subtitle'] }}</span>
-                                    <p>{{ $slide['description'] }}</p>
+                                    <h3>{{ $slide->title }}</h3>
+                                    <span>{{ $slide->subtitle }}</span>
+                                    <p>{{ $slide->description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -56,9 +68,9 @@
                             <div class="box second"
                                 style="background: url({{ url('images/home-bg-2.jpg') }}) no-repeat;">
                                 <div class="content">
-                                    <h3>{{ $slide['title'] }}</h3>
-                                    <span>{{ $slide['subtitle'] }}</span>
-                                    <p>{{ $slide['description'] }}</p>
+                                    <h3>{{ $slide->title }}</h3>
+                                    <span>{{ $slide->subtitle }}</span>
+                                    <p>{{ $slide->description }}</p>
                                 </div>
                             </div>
                         </div>

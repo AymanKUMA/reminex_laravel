@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Slide;
+use App\Models\alert;
 
+use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
@@ -21,7 +22,8 @@ class homeController extends Controller
 
     public function index(){
         return view('index', [
-            'slides' => self::getData()
+            'alerts' => alert::all(),
+            'slides' => Slide::all()
         ]);
     }
 }

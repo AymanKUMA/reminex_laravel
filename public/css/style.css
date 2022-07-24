@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #10221b;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.logoContainer{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 0 10px;
+}
+
+.button{
+    font-size: 15px;
+    background-color:#fd9800;
+    color: #000000;
+    font-weight: 900;
+    border-radius: 50px;
+    margin-top: 10px;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+marquee {
+    padding: 0.5rem;
+    background-color: #fd9800;
+}
+
+.home {
+    padding: 0;
+}
+
+.home .box {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+
+.home .box.second {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.home .box .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.3rem;
+    width: 50rem;
+}
+
+.home .box .content span {
+    font-size: 4rem;
+    color: #10221b;
+}
+
+.home .box .content h3 {
+    font-size: 6rem;
+    color: #fd9800;
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+
+.home .box .content p {
+    line-height: 2;
+    color: #10221b;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 3rem;
+    color: #000000;
+}
+
+@media (max-width: 1200px) {
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+        scroll-padding-top: 7rem;
+    }
+
+    .home .box {
+        padding: 2rem;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-position: right !important;
+    }
+
+    .home .box.second {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-position: left !important;
+    }
+
+    .home .box .content {
+        text-align: center;
+    }
+
+    .home .box .content span {
+        font-size: 3rem;
+    }
+
+    .home .box .content h3 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar.active {
+        left: 0;
+        -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    }
+
+    .header .navbar a {
+        margin: 1rem 0;
+        font-size: 1.7rem;
+    }
+
+    .header .navbar #nav-close {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}

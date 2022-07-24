@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -20,7 +21,10 @@ return new class extends Migration
             $table->string('subtitle',50);
             $table->longText('description');
             $table->tinyInteger('layout');
-            // $table->foreignIdFor(user::class)->constrained('added_by');
+            $table->foreignId('id_user')
+                ->references('id_user')
+                ->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
 

@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\User;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 use phpDocumentor\Reflection\DocBlock\Tags\Uses;
 
 return new class extends Migration
@@ -17,7 +18,10 @@ return new class extends Migration
         Schema::create('alerts', function (Blueprint $table) {
             $table->id('id_alert');
             $table->text('alert');
-            // $table->foreignIdFor(user::class)->constrained('added_by');
+            $table->foreignId('id_user')
+                ->references('id_user')
+                ->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

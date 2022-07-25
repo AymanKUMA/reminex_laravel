@@ -2,7 +2,7 @@
 
 @section('refresh')
 @if (count($slides) >= 4)
-    <meta http-equiv="refresh" content="{{count($slides)  * 10}}">
+    <meta http-equiv="refresh" content="{{count($slides)  * 15}}">
 @else
     <meta http-equiv="refresh" content="30"> 
 @endif    

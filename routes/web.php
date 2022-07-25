@@ -67,3 +67,6 @@ Route::get('/login', function(){
 Route::resource('slides', slidesController::class);
 
 Route::resource('alerts', alertsController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

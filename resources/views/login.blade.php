@@ -23,8 +23,8 @@
                 <h2 class="animation a1">Bienvenue</h2>
                 <h4 class="animation a2">Connecter a votre compte admin</h4>
             </div>
-            <form class="form">
-                <input type="email" class="form-field animation a3" placeholder="Login">
+            <form class="form" method="POST" action()>
+                <input type="uername" class="form-field animation a3" placeholder="Login">
                 <input type="password" class="form-field animation a4" placeholder="Mot de passe">
                 <button class="animation a6">LOGIN</button>
             </form>

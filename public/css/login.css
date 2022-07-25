@@ -7,6 +7,22 @@ body {
     height: 100vh;
 }
 
+.arrow{
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fd9800;
+    border-radius: 50%;
+}
+
+.arrow img{
+    width: 50px;
+}
+
 .left {
     overflow: hidden;
     display: flex;
@@ -102,6 +118,9 @@ body {
     animation-delay: 0.7s;
 }
 
+.a {
+    animation-delay: 0.7s;
+}
 
 .a1 {
     animation-delay: 2s;

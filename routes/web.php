@@ -61,7 +61,7 @@ use App\Http\Controllers\slidesController;
 Route::get('/', [homeController::class, 'index'])->name('home.newsSlider');
 
 Route::get('/login', function(){
-    return view('login');
+    return view('auth.login');
 })->name('home.login');
 
 Route::resource('slides', slidesController::class);

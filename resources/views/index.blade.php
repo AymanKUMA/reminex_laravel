@@ -79,7 +79,7 @@
             @else
                 <div class="swiper-slide fade">
                     <div class="box"
-                        style="background: url({{ url('images/home-bg-1.jpg') }}) no-repeat;">
+                        style="background: url({{ url('images/innoverpour.jpg') }}) no-repeat;">
                         <div class="content">
                             <h3>Hello world</h3>
                             <span>Welcome</span>
